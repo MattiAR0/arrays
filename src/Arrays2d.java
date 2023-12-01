@@ -2,7 +2,7 @@ import java.util.Arrays;
 
 public class Arrays2d {
     public static void main(String[] args) {
-      //  prueba();
+        prueba();
         ejer1();
     }
 
