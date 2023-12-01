@@ -1,6 +1,6 @@
 import java.util.Arrays;
 
-public class Main {
+public class Arrays2d {
     public static void main(String[] args) {
       //  prueba();
         ejer1();
