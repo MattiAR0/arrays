@@ -1,0 +1,33 @@
+public class DecimalARomano{
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Introduce un número entero y positivo (no mayor a 3000): ");
+        int numeroDecimal = scanner.nextInt();
+
+        if (numeroDecimal > 0 && numeroDecimal <= 3000) {
+            String resultado = convertirDecimalARomano(numeroDecimal);
+            System.out.println("El número romano equivalente es: " + resultado);
+        } else {
+            System.out.println("Por favor, introduce un número válido.");
+        }
+    }
+
+    public static String convertirDecimalARomano(int decimal) {
+        String romano = "";
+        int[] valores = {1000, 900, 500, 400, 100, 90, 50, 40, 10, 9, 5, 4, 1};
+        String[] simbolos = {"M", "CM", "D", "CD", "C", "XC", "L", "XL", "X", "IX", "V", "IV", "I"};
+
+        int i = 0;
+        while (decimal > 0) {
+            if (decimal >= valores[i]) {
+                romano += simbolos[i];
+                decimal -= valores[i];
+            } else {
+                i++;
+            }
+        }
+
+        return romano;
+    }
+}
